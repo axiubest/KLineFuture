@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MD_DiagnosisStockBaseVC">
+            <connections>
+                <outlet property="diagnosisBtn" destination="JTt-ne-fAE" id="TyM-PM-y8o"/>
+                <outlet property="diagnosisLine" destination="CtQ-dn-Pqb" id="G24-ne-gGE"/>
+                <outlet property="marketBtn" destination="5Hy-Lw-mM0" id="a2z-oe-uDx"/>
+                <outlet property="marketLine" destination="aB6-uT-Rlv" id="Uda-kb-ajQ"/>
+                <outlet property="segmentView" destination="Db7-LP-SOP" id="8aT-G0-qr4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Db7-LP-SOP">
+                    <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AW2-rC-NQB">
+                            <rect key="frame" x="0.0" y="39.5" width="375" height="0.5"/>
+                            <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="6mq-lk-jqK"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTt-ne-fAE">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="40"/>
+                            <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="15"/>
+                            <state key="normal" title="诊断详情">
+                                <color key="titleColor" red="0.2156862745" green="0.54117647059999996" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="clickSegment:" destination="-1" eventType="touchUpInside" id="3wp-xS-MVa"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hy-Lw-mM0">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="40"/>
+                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
+                            <state key="normal" title="实时详情">
+                                <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="clickSegment:" destination="-1" eventType="touchUpInside" id="lnw-VN-YvO"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtQ-dn-Pqb">
+                            <rect key="frame" x="52" y="35" width="84" height="4"/>
+                            <color key="backgroundColor" red="0.1764705882" green="0.45882352939999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="84" id="Wu7-xp-xEE"/>
+                                <constraint firstAttribute="height" constant="4" id="aAm-mR-SR4"/>
+                            </constraints>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aB6-uT-Rlv">
+                            <rect key="frame" x="239.5" y="35" width="84" height="4"/>
+                            <color key="backgroundColor" red="0.1764705882" green="0.45882352939999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="4" id="GCX-G7-PCj"/>
+                                <constraint firstAttribute="width" constant="84" id="iPw-bQ-xcD"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="CtQ-dn-Pqb" firstAttribute="centerX" secondItem="JTt-ne-fAE" secondAttribute="centerX" id="3Hu-Wp-ytG"/>
+                        <constraint firstAttribute="trailing" secondItem="5Hy-Lw-mM0" secondAttribute="trailing" id="D5K-La-fKJ"/>
+                        <constraint firstItem="aB6-uT-Rlv" firstAttribute="centerY" secondItem="CtQ-dn-Pqb" secondAttribute="centerY" id="DUt-U4-867"/>
+                        <constraint firstAttribute="bottom" secondItem="AW2-rC-NQB" secondAttribute="bottom" id="Dit-Mz-Rf6"/>
+                        <constraint firstItem="AW2-rC-NQB" firstAttribute="top" secondItem="CtQ-dn-Pqb" secondAttribute="bottom" id="LmI-2G-Dos"/>
+                        <constraint firstItem="aB6-uT-Rlv" firstAttribute="centerX" secondItem="5Hy-Lw-mM0" secondAttribute="centerX" id="Md4-es-iK3"/>
+                        <constraint firstItem="AW2-rC-NQB" firstAttribute="top" secondItem="5Hy-Lw-mM0" secondAttribute="bottom" id="Wuc-hE-er6"/>
+                        <constraint firstAttribute="trailing" secondItem="AW2-rC-NQB" secondAttribute="trailing" id="ZbJ-Yp-B0A"/>
+                        <constraint firstItem="AW2-rC-NQB" firstAttribute="top" secondItem="JTt-ne-fAE" secondAttribute="bottom" id="b3p-5g-PXh"/>
+                        <constraint firstItem="5Hy-Lw-mM0" firstAttribute="leading" secondItem="JTt-ne-fAE" secondAttribute="trailing" id="eJl-r5-I2d"/>
+                        <constraint firstItem="AW2-rC-NQB" firstAttribute="leading" secondItem="Db7-LP-SOP" secondAttribute="leading" id="fpG-uR-vIJ"/>
+                        <constraint firstItem="5Hy-Lw-mM0" firstAttribute="top" secondItem="Db7-LP-SOP" secondAttribute="top" id="j4z-j5-G4Z"/>
+                        <constraint firstAttribute="height" constant="40" id="mgE-eJ-wwo"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="qMn-d2-y8X"/>
+                        <constraint firstItem="JTt-ne-fAE" firstAttribute="top" secondItem="Db7-LP-SOP" secondAttribute="top" id="rfY-It-hOp"/>
+                        <constraint firstItem="5Hy-Lw-mM0" firstAttribute="width" secondItem="JTt-ne-fAE" secondAttribute="width" id="ubn-qE-vdB"/>
+                        <constraint firstItem="JTt-ne-fAE" firstAttribute="leading" secondItem="Db7-LP-SOP" secondAttribute="leading" id="xPA-de-Ybo"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQM-T7-8Hp">
+                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGt-et-MTY">
+                            <rect key="frame" x="0.0" y="0.0" width="125" height="49"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="25" maxX="25" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="15"/>
+                            <state key="normal" title="继续诊股" image="diagnose_btn_diagnose_nor">
+                                <color key="titleColor" red="0.69733573719999997" green="0.69733573719999997" blue="0.69733573719999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="clickGoOnDiagnosisiStock:" destination="-1" eventType="touchUpInside" id="BVR-Ga-FJ6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWn-s7-wEt">
+                            <rect key="frame" x="250" y="0.0" width="125" height="49"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="25" maxX="25" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="15"/>
+                            <state key="normal" title="添加自选" image="diagnose_btn_optional_nor">
+                                <color key="titleColor" red="0.69733573719999997" green="0.69733573719999997" blue="0.69733573719999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="addMyChooseStock:" destination="-1" eventType="touchUpInside" id="5eX-FZ-JAR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLi-qC-pMH">
+                            <rect key="frame" x="125" y="0.0" width="125" height="49"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <inset key="titleEdgeInsets" minX="-30" minY="25" maxX="30" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="50" minY="5" maxX="50" maxY="20"/>
+                            <state key="normal" title="诊断结果" image="zhengucenter">
+                                <color key="titleColor" red="0.69733573719999997" green="0.69733573719999997" blue="0.69733573719999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="resultOfDiagnosis:" destination="-1" eventType="touchUpInside" id="ESA-48-2eI"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSv-7t-yJU">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                            <color key="backgroundColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="gNr-2b-t7u"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.69733573719999997" green="0.69733573719999997" blue="0.69733573719999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="QWn-s7-wEt" firstAttribute="top" secondItem="cQM-T7-8Hp" secondAttribute="top" constant="0.5" id="7oC-tK-a9m"/>
+                        <constraint firstItem="TGt-et-MTY" firstAttribute="top" secondItem="cQM-T7-8Hp" secondAttribute="top" constant="0.5" id="BAt-1F-SiM"/>
+                        <constraint firstAttribute="bottom" secondItem="dLi-qC-pMH" secondAttribute="bottom" id="BTI-Lo-XJf"/>
+                        <constraint firstItem="TGt-et-MTY" firstAttribute="leading" secondItem="cQM-T7-8Hp" secondAttribute="leading" id="GxM-yN-Vv9"/>
+                        <constraint firstItem="DSv-7t-yJU" firstAttribute="leading" secondItem="cQM-T7-8Hp" secondAttribute="leading" id="HYm-0P-5Ce"/>
+                        <constraint firstItem="QWn-s7-wEt" firstAttribute="width" secondItem="TGt-et-MTY" secondAttribute="width" id="MWG-hw-Y2o"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="NMT-kX-Ka3"/>
+                        <constraint firstItem="dLi-qC-pMH" firstAttribute="width" secondItem="TGt-et-MTY" secondAttribute="width" id="UK0-2F-i3u"/>
+                        <constraint firstItem="DSv-7t-yJU" firstAttribute="top" secondItem="cQM-T7-8Hp" secondAttribute="top" id="UZd-tp-UEA"/>
+                        <constraint firstAttribute="height" constant="49" id="Xt8-n3-S1l"/>
+                        <constraint firstAttribute="bottom" secondItem="QWn-s7-wEt" secondAttribute="bottom" id="b6C-Qc-rXi"/>
+                        <constraint firstItem="QWn-s7-wEt" firstAttribute="leading" secondItem="dLi-qC-pMH" secondAttribute="trailing" id="bYG-aU-4df"/>
+                        <constraint firstAttribute="trailing" secondItem="DSv-7t-yJU" secondAttribute="trailing" id="idK-gk-CIh"/>
+                        <constraint firstAttribute="bottom" secondItem="TGt-et-MTY" secondAttribute="bottom" id="lNH-lJ-TiP"/>
+                        <constraint firstAttribute="trailing" secondItem="QWn-s7-wEt" secondAttribute="trailing" id="lV8-8b-qBK"/>
+                        <constraint firstItem="dLi-qC-pMH" firstAttribute="top" secondItem="cQM-T7-8Hp" secondAttribute="top" id="omW-dW-Nza"/>
+                        <constraint firstItem="dLi-qC-pMH" firstAttribute="leading" secondItem="TGt-et-MTY" secondAttribute="trailing" id="wEp-7z-cNF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Db7-LP-SOP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6x5-W9-0sG"/>
+                <constraint firstAttribute="trailing" secondItem="cQM-T7-8Hp" secondAttribute="trailing" id="Rcs-y1-nJM"/>
+                <constraint firstItem="cQM-T7-8Hp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VQo-Q9-ayl"/>
+                <constraint firstAttribute="trailing" secondItem="Db7-LP-SOP" secondAttribute="trailing" id="c2M-Eb-82G"/>
+                <constraint firstItem="Db7-LP-SOP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="iIZ-Rq-QNd"/>
+                <constraint firstAttribute="bottom" secondItem="cQM-T7-8Hp" secondAttribute="bottom" id="yHO-A3-ikW"/>
+            </constraints>
+            <point key="canvasLocation" x="-317.5" y="-202.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="diagnose_btn_diagnose_nor" width="22" height="22"/>
+        <image name="diagnose_btn_optional_nor" width="22" height="22"/>
+        <image name="zhengucenter" width="60" height="60"/>
+    </resources>
+</document>

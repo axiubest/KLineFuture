@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MD_OpinionViewController">
+            <connections>
+                <outlet property="perInformationLab" destination="k1I-iE-ph2" id="A89-rf-DAz"/>
+                <outlet property="senBtn" destination="jIa-qh-FTP" id="qYi-eq-OJO"/>
+                <outlet property="textView" destination="rEu-FO-sew" id="7MA-YP-eH9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rEu-FO-sew">
+                    <rect key="frame" x="10" y="74" width="355" height="300"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="0PM-B2-TL4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="填写您的联系方式(手机号/QQ/邮箱)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k1I-iE-ph2">
+                    <rect key="frame" x="10" y="384" width="355" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIa-qh-FTP">
+                    <rect key="frame" x="10" y="464" width="355" height="40"/>
+                    <color key="backgroundColor" red="0.17647058823529413" green="0.45882352941176469" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="NYv-yr-ntQ"/>
+                    </constraints>
+                    <state key="normal" title="提交">
+                        <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickSendBtn:" destination="-1" eventType="touchUpInside" id="JCI-Dj-2mX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="k1I-iE-ph2" firstAttribute="top" secondItem="rEu-FO-sew" secondAttribute="bottom" constant="10" id="Cqt-Aw-6Gw"/>
+                <constraint firstAttribute="trailing" secondItem="rEu-FO-sew" secondAttribute="trailing" constant="10" id="Rf2-1M-tqx"/>
+                <constraint firstItem="rEu-FO-sew" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ZBW-Kd-cWQ"/>
+                <constraint firstItem="k1I-iE-ph2" firstAttribute="leading" secondItem="rEu-FO-sew" secondAttribute="leading" id="kxU-k7-9AW"/>
+                <constraint firstItem="jIa-qh-FTP" firstAttribute="leading" secondItem="k1I-iE-ph2" secondAttribute="leading" id="lXt-cf-zIG"/>
+                <constraint firstItem="jIa-qh-FTP" firstAttribute="trailing" secondItem="k1I-iE-ph2" secondAttribute="trailing" id="qIC-hL-RBa"/>
+                <constraint firstItem="k1I-iE-ph2" firstAttribute="trailing" secondItem="rEu-FO-sew" secondAttribute="trailing" id="qlg-MT-XzX"/>
+                <constraint firstItem="jIa-qh-FTP" firstAttribute="top" secondItem="k1I-iE-ph2" secondAttribute="bottom" constant="50" id="sGi-6M-XvI"/>
+                <constraint firstItem="rEu-FO-sew" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="zXK-81-vEd"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

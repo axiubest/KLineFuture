@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MD_DiagnosisStockSearchVC">
+            <connections>
+                <outlet property="XIUTableView" destination="nep-Hc-r9x" id="jHT-Dh-lEz"/>
+                <outlet property="historyTableView" destination="s1y-zv-phY" id="UwF-B5-r7u"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="nep-Hc-r9x">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ZJF-NL-1Il"/>
+                        <outlet property="delegate" destination="-1" id="BNc-b0-dNi"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s1y-zv-phY">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="35K-mD-GVc"/>
+                        <outlet property="delegate" destination="-1" id="RAn-Id-KD3"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="s1y-zv-phY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="6DB-EZ-3Fq"/>
+                <constraint firstAttribute="bottom" secondItem="s1y-zv-phY" secondAttribute="bottom" id="G4o-Rr-fFN"/>
+                <constraint firstAttribute="bottom" secondItem="nep-Hc-r9x" secondAttribute="bottom" id="HE0-zX-VGA"/>
+                <constraint firstAttribute="trailing" secondItem="s1y-zv-phY" secondAttribute="trailing" id="LOQ-9H-WEK"/>
+                <constraint firstItem="nep-Hc-r9x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MXT-i6-xq1"/>
+                <constraint firstItem="nep-Hc-r9x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Xjo-4V-vqU"/>
+                <constraint firstAttribute="trailing" secondItem="nep-Hc-r9x" secondAttribute="trailing" id="akv-qi-0r3"/>
+                <constraint firstItem="s1y-zv-phY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vcz-bj-BEX"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

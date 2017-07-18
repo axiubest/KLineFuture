@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MD_SearchStockVC">
+            <connections>
+                <outlet property="XIUTableView" destination="PSJ-oS-ekc" id="KtP-zh-ujr"/>
+                <outlet property="historyTableView" destination="Ag3-jm-E1I" id="Qd0-gT-1UI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PSJ-oS-ekc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="f5E-jn-xpj"/>
+                        <outlet property="delegate" destination="-1" id="g5L-3L-wK3"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ag3-jm-E1I">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="P3t-MR-XGU"/>
+                        <outlet property="delegate" destination="-1" id="jF6-bM-4MW"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PSJ-oS-ekc" secondAttribute="trailing" id="1d6-a0-H4U"/>
+                <constraint firstItem="PSJ-oS-ekc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="A2o-lj-2ZZ"/>
+                <constraint firstAttribute="trailing" secondItem="Ag3-jm-E1I" secondAttribute="trailing" id="CAp-xb-epV"/>
+                <constraint firstAttribute="bottom" secondItem="Ag3-jm-E1I" secondAttribute="bottom" id="QlC-T0-1UJ"/>
+                <constraint firstItem="Ag3-jm-E1I" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="X05-cu-7St"/>
+                <constraint firstAttribute="bottom" secondItem="PSJ-oS-ekc" secondAttribute="bottom" id="eCi-9f-rRB"/>
+                <constraint firstItem="PSJ-oS-ekc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="m2n-As-uii"/>
+                <constraint firstItem="Ag3-jm-E1I" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="z5X-gv-GUu"/>
+            </constraints>
+            <point key="canvasLocation" x="50.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

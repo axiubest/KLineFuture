@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+<script src="echarts.js"></script>
+
+</head>
+<body>
+  <div id="main" style="width: 360px;height:160px; background-color:red"></div>
+  <script type="text/javascript">
+
+
+
+
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            tooltip : {
+                show:false,
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '-10%',
+                right: '4%',
+                top: '10%',
+                containLabel: true
+            },
+            xAxis : [
+                     { axisTick:{
+                     show:false
+                     },
+                     type : 'category',
+                      data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    
+                     axisTick: {
+                     alignWithLabel: true
+                     }
+                     }
+                     ],
+                     yAxis : [
+                              {
+                              axisTick:{
+                              show:false
+                              },
+                              type : 'value',
+                              axisLabel: {
+                              show : false
+                              }
+                              }
+                              ],
+                              series : [
+                                        {
+                                        name:'直接访问',
+                                        type:'bar',
+                                        barWidth: '60%',
+                                        itemStyle: {
+                                        normal: {
+                                        color: function(params) {
+                                        var colorList=[];
+                                        for(var i=0;i<7;i++){
+                                        colorList.push('#FF5E45');
+                                        if(params.data<0){
+                                        colorList[params.dataIndex]='#1CB54A'
+                                        }
+                                        }
+                                        return colorList[params.dataIndex]
+                                        }
+                                        }
+                                        },
+                                        data:[-100, 52, 200, 334, 390, -60, 220]
+                                        
+                                        }
+                                        ]
+        };
+
+        myChart.setOption(option);
+    </script>
+
+</body>
+</html>

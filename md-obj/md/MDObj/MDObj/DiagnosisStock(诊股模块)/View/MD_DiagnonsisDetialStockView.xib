@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MD_DiagnonsisDetialStockView">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="270"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6J-Iw-3O8" customClass="YKLineChartView">
+                    <rect key="frame" x="0.0" y="0.0" width="431" height="270"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRa-DZ-jKb">
+                            <rect key="frame" x="301" y="0.0" width="130" height="270"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.085075431034482757" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="130" id="zGe-86-RrK"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="kRa-DZ-jKb" secondAttribute="trailing" id="TSj-mk-jpZ"/>
+                        <constraint firstItem="kRa-DZ-jKb" firstAttribute="top" secondItem="K6J-Iw-3O8" secondAttribute="top" id="pdS-Dw-J1c"/>
+                        <constraint firstAttribute="bottom" secondItem="kRa-DZ-jKb" secondAttribute="bottom" id="sbR-Sf-B2b"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="K6J-Iw-3O8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N1v-l1-rUg"/>
+                <constraint firstAttribute="bottom" secondItem="K6J-Iw-3O8" secondAttribute="bottom" id="R4z-jD-lEc"/>
+                <constraint firstItem="K6J-Iw-3O8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="i8n-hn-yto"/>
+                <constraint firstAttribute="trailing" secondItem="K6J-Iw-3O8" secondAttribute="trailing" id="lW2-Ub-hUM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="layerIView" destination="kRa-DZ-jKb" id="SZs-b1-QFR"/>
+                <outlet property="stockKLineView" destination="K6J-Iw-3O8" id="bA0-xW-N98"/>
+            </connections>
+            <point key="canvasLocation" x="303.5" y="-262"/>
+        </view>
+    </objects>
+</document>
