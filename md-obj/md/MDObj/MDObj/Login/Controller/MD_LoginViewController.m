@@ -46,6 +46,7 @@ static id _instance = nil;
 //        qq
     }else {
 //        weichart
+        [self getUserInfoOfOauth];
     }
 }
 
@@ -140,27 +141,32 @@ static id _instance = nil;
 
 
 
-- (void)getUserInfoForPlatform:(UMSocialPlatformType)platformType
+- (void)getUserInfoOfOauth
 {
-    [[UMSocialManager defaultManager] getUserInfoWithPlatform:platformType currentViewController:self completion:^(id result, NSError *error) {
-        
-        UMSocialUserInfoResponse *resp = result;
-        
-        // 第三方登录数据(为空表示平台未提供)
-        // 授权数据
-        NSLog(@" uid: %@", resp.uid);
-        NSLog(@" openid: %@", resp.openid);
-        NSLog(@" accessToken: %@", resp.accessToken);
-        NSLog(@" refreshToken: %@", resp.refreshToken);
-        NSLog(@" expiration: %@", resp.expiration);
-        
-        // 用户数据
-        NSLog(@" name: %@", resp.name);
-        NSLog(@" iconurl: %@", resp.iconurl);
-        NSLog(@" gender: %@", resp.unionGender);
-        
-        // 第三方平台SDK原始数据
-        NSLog(@" originalResponse: %@", resp.originalResponse);
-    }];
+    
+        [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_WechatSession currentViewController:nil completion:^(id result, NSError *error) {
+            if (error) {
+                
+            } else {
+                UMSocialUserInfoResponse *resp = result;
+                
+                // 授权信息
+                NSLog(@"Wechat uid: %@", resp.uid);
+                NSLog(@"Wechat openid: %@", resp.openid);
+                NSLog(@"Wechat unionid: %@", resp.unionId);
+                NSLog(@"Wechat accessToken: %@", resp.accessToken);
+                NSLog(@"Wechat refreshToken: %@", resp.refreshToken);
+                NSLog(@"Wechat expiration: %@", resp.expiration);
+                
+                // 用户信息
+                NSLog(@"Wechat name: %@", resp.name);
+                NSLog(@"Wechat iconurl: %@", resp.iconurl);
+                NSLog(@"Wechat gender: %@", resp.unionGender);
+                
+                // 第三方平台SDK源数据
+                NSLog(@"Wechat originalResponse: %@", resp.originalResponse);
+                
+            }
+        }];
 }
 @end

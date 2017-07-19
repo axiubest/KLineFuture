@@ -20,4 +20,6 @@ typedef NS_ENUM(NSInteger, SingleStockSegmentAtyle) {
 @property (nonatomic, strong) NSString *CodeString;
 @property (nonatomic, strong) NSString *CodeName;
 
+
+@property (nonatomic, assign) BOOL isFloatView;
 @end

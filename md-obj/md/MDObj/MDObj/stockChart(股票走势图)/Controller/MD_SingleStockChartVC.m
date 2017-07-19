@@ -15,6 +15,7 @@
 #import "AppServer.h"
 #import "YYStock.h"
 #import "SRWebSocket.h"
+#import "FloatView.h"
 
 #import "XIU_NavView.h"
 #import "MD_SingleStockNewSegmentView.h"
@@ -26,10 +27,10 @@
 #import "MD_StockChartNewsListModel.h"
 #import "MD_LargeStockViewController.h"
 #import "MJRefresh.h"
-
+#import "MD_DiagnosisStockBaseVC.h"
 static NSInteger xstartIndex = 1;
 static NSInteger xendIndex = 15;
-@interface MD_SingleStockChartVC ()<YYStockDataSource,SRWebSocketDelegate,MD_SingleStockNewSegmentViewDelegate,UITableViewDelegate, UITableViewDataSource>
+@interface MD_SingleStockChartVC ()<YYStockDataSource,SRWebSocketDelegate,MD_SingleStockNewSegmentViewDelegate,UITableViewDelegate, UITableViewDataSource, FloatViewDelegate>
 {
     NSInteger SegmentType;//股票图下方四个按钮点击状态，默认选择第一个
 }
@@ -90,13 +91,12 @@ static NSInteger xendIndex = 15;
 @property (nonatomic, strong) NSMutableArray *informationArray;
 @property (nonatomic, strong) NSMutableArray *researchReportArray;
 @property (nonatomic, strong) NSMutableArray *noticeArray;
-
+@property (nonatomic, strong) FloatView *floatView;
 
 
 @end
 
 @implementation MD_SingleStockChartVC
-
 
 
 - (void)viewDidLoad {
@@ -121,6 +121,26 @@ static NSInteger xendIndex = 15;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestMore:) name:ScrollEnd object:nil];
     [self addRefresh];
+    
+    
+    if (!_isFloatView == YES) {
+        self.floatView = [FloatView floatViewWithRadius:30 point:CGPointMake(0 , self.view.bounds.size.height) color:[UIColor colorWithHexString:@"FF6868"] inView:self.view];
+        //设置代理（代理方法调用在最下方）
+        self.floatView.delegate = self;
+        self.floatView.label.text = @"诊它一下";
+        self.floatView.label.font = [UIFont systemFontOfSize:15];
+        self.floatView.label.textColor = [UIColor whiteColor];
+        //    [self.floatView startProgressAnimation];
+        [self.floatView startBitAnimation];
+    }
+
+
+}
+
+- (void)floatViewClicked {
+    MD_DiagnosisStockBaseVC *vc = [[MD_DiagnosisStockBaseVC alloc] init];
+    vc.CodeString = _CodeString;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)addRefresh {
@@ -321,7 +341,12 @@ static NSInteger xendIndex = 15;
     if (indexPath.section == 0) {
         if (SegmentType == SingleStockSegmentAtyle_Notice) {
             MD_LargeStockViewController *vc = [[MD_LargeStockViewController alloc] init];
-            vc.url =[NSString stringWithFormat:@"http://wx.shangjin666.cn/index.html#/rescontent?type='notice'&id=%@", [self.noticeArray[indexPath.row] Id]];
+            vc.url =[NSString stringWithFormat:@"http://wx.shangjin666.cn/index.html#/rescontent?type=notice&id=%@", [self.noticeArray[indexPath.row] Id]];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        if (SegmentType == SingleStockSegmentAtyle_Information) {
+            MD_LargeStockViewController *vc = [[MD_LargeStockViewController alloc] init];
+            vc.url =[NSString stringWithFormat:@"http://wx.shangjin666.cn/index.html#/rescontent?type=info&id=%@", [self.informationArray[indexPath.row] Id]];
             [self.navigationController pushViewController:vc animated:YES];
         }
     }
@@ -405,7 +430,7 @@ static NSInteger xendIndex = 15;
             }
      
             [self reload];
-        NSLog(@"%@", self.informationArray);
+
     }];
 
 }
@@ -414,6 +439,7 @@ static NSInteger xendIndex = 15;
 //公告网络请求
 - (void)requestNotice {
     [[XIU_NetAPIClient sharedJsonClient] requestJsonDataWithPath:API_GetNoticeList withParams:@{@"code" : _CodeString,@"startIndex" :[NSString stringWithFormat:@"%ld", xstartIndex], @"endIndex" :[NSString stringWithFormat:@"%ld", xendIndex]} withMethodType:Post andBlock:^(id data, NSError *error) {
+        
         for (NSDictionary *obj in data[@"List"]) {
             MD_StockChartNewsListModel *model = [[MD_StockChartNewsListModel alloc] init];
             model.Id = obj[@"Id"];

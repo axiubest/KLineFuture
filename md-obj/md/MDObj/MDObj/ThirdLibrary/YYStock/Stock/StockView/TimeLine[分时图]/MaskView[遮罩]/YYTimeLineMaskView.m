@@ -51,6 +51,8 @@
     //绘制选中日期
     NSDictionary *attribute = @{NSFontAttributeName:[UIFont systemFontOfSize:9],NSForegroundColorAttributeName:[UIColor YYStock_selectedRectTextColor]};
     NSString *dayText = [self.selectedModel DayDatail];
+    NSLog(@"%@", dayText);
+    
     CGRect textRect = [self rectOfNSString:dayText attribute:attribute];
     
     if (x + textRect.size.width/2.f + 2 > CGRectGetMaxX(self.stockScrollView.frame)) {

@@ -235,6 +235,9 @@
 		187D4F181F01FF540089C375 /* AppServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D4F171F01FF540089C375 /* AppServer.m */; };
 		187D4F261F0223200089C375 /* MD_SingleStockHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D4F251F0223200089C375 /* MD_SingleStockHeaderView.m */; };
 		187D4F291F022E400089C375 /* MD_OptionalListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D4F281F022E400089C375 /* MD_OptionalListModel.m */; };
+		187DFB561F1F22B900C8DEA3 /* FloatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187DFB511F1F22B900C8DEA3 /* FloatView.m */; };
+		187DFB571F1F22B900C8DEA3 /* FloatViewRotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187DFB531F1F22B900C8DEA3 /* FloatViewRotationView.m */; };
+		187DFB581F1F22B900C8DEA3 /* FloatViewSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187DFB551F1F22B900C8DEA3 /* FloatViewSubView.m */; };
 		18830E541EFB5134003FD972 /* MD_SelectStockHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18830E531EFB5134003FD972 /* MD_SelectStockHeaderView.m */; };
 		18830E561EFB5146003FD972 /* MD_SelectStockHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18830E551EFB5146003FD972 /* MD_SelectStockHeaderView.xib */; };
 		18830E5A1EFB6B9D003FD972 /* MD_OptationPlateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18830E591EFB6B9D003FD972 /* MD_OptationPlateView.m */; };
@@ -769,6 +772,12 @@
 		187D4F251F0223200089C375 /* MD_SingleStockHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD_SingleStockHeaderView.m; sourceTree = "<group>"; };
 		187D4F271F022E400089C375 /* MD_OptionalListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD_OptionalListModel.h; sourceTree = "<group>"; };
 		187D4F281F022E400089C375 /* MD_OptionalListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD_OptionalListModel.m; sourceTree = "<group>"; };
+		187DFB501F1F22B900C8DEA3 /* FloatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatView.h; sourceTree = "<group>"; };
+		187DFB511F1F22B900C8DEA3 /* FloatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatView.m; sourceTree = "<group>"; };
+		187DFB521F1F22B900C8DEA3 /* FloatViewRotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatViewRotationView.h; sourceTree = "<group>"; };
+		187DFB531F1F22B900C8DEA3 /* FloatViewRotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatViewRotationView.m; sourceTree = "<group>"; };
+		187DFB541F1F22B900C8DEA3 /* FloatViewSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatViewSubView.h; sourceTree = "<group>"; };
+		187DFB551F1F22B900C8DEA3 /* FloatViewSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatViewSubView.m; sourceTree = "<group>"; };
 		18830E521EFB5134003FD972 /* MD_SelectStockHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD_SelectStockHeaderView.h; sourceTree = "<group>"; };
 		18830E531EFB5134003FD972 /* MD_SelectStockHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD_SelectStockHeaderView.m; sourceTree = "<group>"; };
 		18830E551EFB5146003FD972 /* MD_SelectStockHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MD_SelectStockHeaderView.xib; sourceTree = "<group>"; };
@@ -1926,6 +1935,7 @@
 		187C73491EF21CB70079FE85 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				187DFB4F1F1F22B900C8DEA3 /* FloatView（浮窗） */,
 				1878A61E1F14B8B60018DDE5 /* YYStock */,
 				188BD7E91F0DD4C20084C7CB /* YKlineChartView */,
 				FA5BF0221F0917B8007A7C5C /* UMSocial */,
@@ -2137,6 +2147,19 @@
 				188C6F3C1F186D8C00A42DF7 /* MD_SingleStockCompanyInfoCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		187DFB4F1F1F22B900C8DEA3 /* FloatView（浮窗） */ = {
+			isa = PBXGroup;
+			children = (
+				187DFB501F1F22B900C8DEA3 /* FloatView.h */,
+				187DFB511F1F22B900C8DEA3 /* FloatView.m */,
+				187DFB521F1F22B900C8DEA3 /* FloatViewRotationView.h */,
+				187DFB531F1F22B900C8DEA3 /* FloatViewRotationView.m */,
+				187DFB541F1F22B900C8DEA3 /* FloatViewSubView.h */,
+				187DFB551F1F22B900C8DEA3 /* FloatViewSubView.m */,
+			);
+			path = "FloatView（浮窗）";
 			sourceTree = "<group>";
 		};
 		18830E5E1EFB7091003FD972 /* optationDiagnosis */ = {
@@ -2711,6 +2734,7 @@
 				1825A3781F04E7850006EAF3 /* MJRefreshAutoFooter.m in Sources */,
 				187C73C91EF21CDF0079FE85 /* MJPropertyType.m in Sources */,
 				187C73BA1EF21CDF0079FE85 /* MASCompositeConstraint.m in Sources */,
+				187DFB571F1F22B900C8DEA3 /* FloatViewRotationView.m in Sources */,
 				188BD7FA1F0DD4C20084C7CB /* YKLineEntity.m in Sources */,
 				187C73CE1EF21CDF0079FE85 /* NSString+MJExtension.m in Sources */,
 				187C73BE1EF21CDF0079FE85 /* MASViewAttribute.m in Sources */,
@@ -2756,6 +2780,7 @@
 				1864724F1F0B998D004E6821 /* MD_OutationHSView.m in Sources */,
 				187C73C71EF21CDF0079FE85 /* MJProperty.m in Sources */,
 				FA5BF0201F08F76E007A7C5C /* MD_LoginViewController.m in Sources */,
+				187DFB581F1F22B900C8DEA3 /* FloatViewSubView.m in Sources */,
 				187C72EB1EF219510079FE85 /* XIU_WebViewController.m in Sources */,
 				187C73B21EF21CDF0079FE85 /* AFHTTPSessionManager.m in Sources */,
 				187C73C11EF21CDF0079FE85 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -2863,6 +2888,7 @@
 				188BD7FB1F0DD4C20084C7CB /* YKTimeLineView.m in Sources */,
 				1878A6701F14B8B60018DDE5 /* YYStockScrollView.m in Sources */,
 				188BD7FC1F0DD4C20084C7CB /* YKViewBase.m in Sources */,
+				187DFB561F1F22B900C8DEA3 /* FloatView.m in Sources */,
 				182D68BC1EF223A100EB16F5 /* MD_MeViewController.m in Sources */,
 				187C73C51EF21CDF0079FE85 /* MJExtensionConst.m in Sources */,
 				184F051C1EFCA3DA00625EBF /* SRWebSocket.m in Sources */,

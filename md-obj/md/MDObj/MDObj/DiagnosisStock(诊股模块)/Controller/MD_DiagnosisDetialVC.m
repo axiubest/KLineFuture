@@ -70,20 +70,24 @@
 }
 
 - (void)request {
-    
-    
-    [[MD_NetRequestManager sharedManager] request_ZGBlock:^(id data, NSError *error) {
+    [[MD_NetRequestManager sharedManager] request_WithCodeString:_CodeString ZGBlock:^(id data, NSError *error) {
+        if ([data isKindOfClass:[NSString class]]) {
+            _firstAnimationView.hidden = YES;
+            UIImageView *v = [[UIImageView alloc] initWithFrame:CGRectMake(0, -40, KWIDTH, KHEIGHT)];
+            v.image = [UIImage imageNamed:@"xiunomessage"];
+            [self.view addSubview:v];
+            return ;
+        }
         self.model = data;
         _firstAnimationView.hidden = YES;
         [self.XIUTableView reloadData];
         
-        dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0* NSEC_PER_SEC));
+        dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0* NSEC_PER_SEC));
         
         dispatch_after(delayTime, dispatch_get_main_queue(), ^{
             [self showAlertView];
         });
     }];
-    
     
 }
 

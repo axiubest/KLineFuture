@@ -22,9 +22,13 @@
 }
 
 //这个接口写的好
-- (void)request_ZGBlock:(void (^)(id data, NSError *error))block {
-    [[XIU_NetAPIClient sharedJsonClient] requestJsonDataWithPath:API_ZG withParams:@{@"APPID":APPID,@"timestamp":XIU_Timestamp,@"signed":XIU_Signed,@"code":@"601006"} withMethodType:Post andBlock:^(id data, NSError *error) {
+- (void)request_WithCodeString:(NSString *)code ZGBlock:(void (^)(id data, NSError *error))block {
+    [[XIU_NetAPIClient sharedJsonClient] requestJsonDataWithPath:API_ZG withParams:@{@"APPID":APPID,@"timestamp":XIU_Timestamp,@"signed":XIU_Signed,@"code":code} withMethodType:Post andBlock:^(id data, NSError *error) {
         
+        if (![[data objectForKey:@"Error_msg"] isKindOfClass:[NSNull class]]) {
+            block(@"没有匹配到相似的历史走势",error);
+            return ;
+        }
         NSMutableDictionary *dic = [data objectForKey:@"Result"];
         if (dic) {
             

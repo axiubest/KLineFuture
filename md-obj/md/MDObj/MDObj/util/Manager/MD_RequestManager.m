@@ -110,7 +110,7 @@
 #pragma mark ---- 公司概况
 - (void)request_KlineCompanyInfoCodeString:(NSString *)code Block:(void (^)(id data, NSError *error))block {
     [[XIU_NetAPIClient sharedJsonClient]requestJsonDataWithPath:API_Overview withParams:@{@"code":code} withMethodType:Post andBlock:^(id data, NSError *error) {
-        if (data[@"Data"][@"CirculatingCapital"]) {
+        if (![data[@"Data"]isKindOfClass:[NSNull class]]) {
             NSDictionary *dic = data[@"Data"];
             MD_StockChartCompanyInfoModel *model = [[MD_StockChartCompanyInfoModel alloc] init];
             model.CirculatingCapital = dic[@"CirculatingCapital"];

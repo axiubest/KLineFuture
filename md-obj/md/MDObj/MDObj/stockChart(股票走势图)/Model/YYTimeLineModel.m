@@ -13,20 +13,25 @@
     NSDictionary * _dict;
     NSString *nowPrice;
     NSString *volume;
+    NSString *DayDatail;
 }
 
 - (NSString *)TimeDesc {
-    if( [_dict[@"time"] integerValue] == 780) {
+    if( [_dict[@"time"] isEqualToString:@"11:30"]) {
         return @"11:30/13:00";
-    } else if( [_dict[@"time"] integerValue] == 1020) {
+    } else if( [_dict[@"time"] isEqualToString:@"15:00"]) {
         return @"15:00";
     } else {
-        return [NSString stringWithFormat:@"%02ld:%02ld",[_dict[@"time"] integerValue]/60,[_dict[@"time"] integerValue]%60];
+        return _dict[@"time"];
     }
 }
 
 - (NSString *)DayDatail {
-    return [NSString stringWithFormat:@"%02ld:%02ld",[_dict[@"time"] integerValue]/60,[_dict[@"time"] integerValue]%60];
+    
+    return _dict[@"time"];
+   
+                  
+    
 }
 
 //前一天的收盘价

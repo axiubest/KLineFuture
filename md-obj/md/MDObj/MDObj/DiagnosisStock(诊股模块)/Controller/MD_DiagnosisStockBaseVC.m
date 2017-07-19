@@ -9,6 +9,7 @@
 #import "MD_DiagnosisStockBaseVC.h"
 #import "MD_DiagnosisDetialVC.h"
 #import "MD_SingleStockChartVC.h"
+#import <UMSocialCore/UMSocialCore.h>
 @interface MD_DiagnosisStockBaseVC ()
 
 
@@ -29,11 +30,11 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"智能诊股";
-    
-    //实施详情
+    [self createNavgationButtonWithImageNmae:@"diagnose_btn_chare" title:nil target:self action:@selector(clickShare) type:UINavigationItem_Type_RightItem];
+    //实时详情
     MD_SingleStockChartVC *vc2 = [[MD_SingleStockChartVC alloc] init];
     vc2.CodeString = _CodeString;
-    
+    vc2.isFloatView = YES;
     vc2.view.frame = CGRectMake(0, 64 + 40, self.view.width, self.view.height - 49 - 64 - 40);
     _singleStockVc = vc2;
     [self addChildViewController:vc2];
@@ -52,6 +53,29 @@
 
 }
 
+- (void)clickShare {
+    NSString *text = @"未来K线米度信息科技有限公司";
+    
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    
+    messageObject.text = text;
+    
+    [[UMSocialManager defaultManager] shareToPlatform:UMSocialPlatformType_WechatSession messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+        NSString *message = nil;
+        if (!error) {
+            message = [NSString stringWithFormat:@"分享成功"];
+        } else {
+            message = [NSString stringWithFormat:@"失败原因Code: %d\n",(int)error.code];
+            
+        }
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"share"
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"确定", nil)
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
+}
 
 - (IBAction)clickGoOnDiagnosisiStock:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];

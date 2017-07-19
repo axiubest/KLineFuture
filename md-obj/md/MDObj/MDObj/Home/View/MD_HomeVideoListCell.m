@@ -28,9 +28,10 @@
     _userImage.layer.masksToBounds = YES;
     _userImage.layer.cornerRadius = _userImage.width/2;
     
-    
     _describtionLab.text = [dic objectForKey:@"Text"];
     _userName.text = [dic objectForKey:@"AdvName"];
+    
+    _tiemLab.text = [dic objectForKey:@"DateTime"];
     if ([[NSString stringWithFormat:@"%@", [dic objectForKey:@"IsGood"]] isEqualToString:@"0"]) {//unlike
         
         _lineNum.textColor = [UIColor colorWithHexString:@"999999"];

@@ -16,5 +16,5 @@
 
 + (instancetype)sharedManager;
 
-- (void)request_ZGBlock:(void (^)(id data, NSError *error))block;
+- (void)request_WithCodeString:(NSString *)code ZGBlock:(void (^)(id data, NSError *error))block;
 @end

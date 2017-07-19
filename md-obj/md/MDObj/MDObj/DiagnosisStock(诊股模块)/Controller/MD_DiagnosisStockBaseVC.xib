@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -114,7 +115,7 @@
                             <inset key="titleEdgeInsets" minX="0.0" minY="25" maxX="25" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="15"/>
                             <state key="normal" title="添加自选" image="diagnose_btn_optional_nor">
-                                <color key="titleColor" red="0.69733573719999997" green="0.69733573719999997" blue="0.69733573719999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="addMyChooseStock:" destination="-1" eventType="touchUpInside" id="5eX-FZ-JAR"/>
@@ -126,7 +127,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                             <inset key="titleEdgeInsets" minX="-30" minY="25" maxX="30" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="50" minY="5" maxX="50" maxY="20"/>
-                            <state key="normal" title="诊断结果" image="zhengucenter">
+                            <state key="normal">
                                 <color key="titleColor" red="0.69733573719999997" green="0.69733573719999997" blue="0.69733573719999997" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
@@ -140,14 +141,29 @@
                                 <constraint firstAttribute="height" constant="0.5" id="gNr-2b-t7u"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="诊断结果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3J-Gh-tQn">
+                            <rect key="frame" x="167" y="35" width="41" height="10"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhengucenter" translatesAutoresizingMaskIntoConstraints="NO" id="V5D-0p-otR">
+                            <rect key="frame" x="175" y="5" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="V5D-0p-otR" secondAttribute="height" multiplier="1:1" id="JHa-qe-G8Q"/>
+                                <constraint firstAttribute="width" constant="25" id="n5Q-vC-dqQ"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.69733573719999997" green="0.69733573719999997" blue="0.69733573719999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="QWn-s7-wEt" firstAttribute="top" secondItem="cQM-T7-8Hp" secondAttribute="top" constant="0.5" id="7oC-tK-a9m"/>
                         <constraint firstItem="TGt-et-MTY" firstAttribute="top" secondItem="cQM-T7-8Hp" secondAttribute="top" constant="0.5" id="BAt-1F-SiM"/>
                         <constraint firstAttribute="bottom" secondItem="dLi-qC-pMH" secondAttribute="bottom" id="BTI-Lo-XJf"/>
+                        <constraint firstItem="H3J-Gh-tQn" firstAttribute="centerX" secondItem="dLi-qC-pMH" secondAttribute="centerX" id="GWc-5y-BN2"/>
                         <constraint firstItem="TGt-et-MTY" firstAttribute="leading" secondItem="cQM-T7-8Hp" secondAttribute="leading" id="GxM-yN-Vv9"/>
                         <constraint firstItem="DSv-7t-yJU" firstAttribute="leading" secondItem="cQM-T7-8Hp" secondAttribute="leading" id="HYm-0P-5Ce"/>
+                        <constraint firstItem="V5D-0p-otR" firstAttribute="centerX" secondItem="H3J-Gh-tQn" secondAttribute="centerX" id="Jts-l1-8hk"/>
                         <constraint firstItem="QWn-s7-wEt" firstAttribute="width" secondItem="TGt-et-MTY" secondAttribute="width" id="MWG-hw-Y2o"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="NMT-kX-Ka3"/>
                         <constraint firstItem="dLi-qC-pMH" firstAttribute="width" secondItem="TGt-et-MTY" secondAttribute="width" id="UK0-2F-i3u"/>
@@ -158,7 +174,10 @@
                         <constraint firstAttribute="trailing" secondItem="DSv-7t-yJU" secondAttribute="trailing" id="idK-gk-CIh"/>
                         <constraint firstAttribute="bottom" secondItem="TGt-et-MTY" secondAttribute="bottom" id="lNH-lJ-TiP"/>
                         <constraint firstAttribute="trailing" secondItem="QWn-s7-wEt" secondAttribute="trailing" id="lV8-8b-qBK"/>
+                        <constraint firstItem="H3J-Gh-tQn" firstAttribute="top" secondItem="V5D-0p-otR" secondAttribute="bottom" constant="5" id="mnM-2D-dxP"/>
+                        <constraint firstItem="V5D-0p-otR" firstAttribute="top" secondItem="DSv-7t-yJU" secondAttribute="bottom" constant="4" id="oeE-pd-uVp"/>
                         <constraint firstItem="dLi-qC-pMH" firstAttribute="top" secondItem="cQM-T7-8Hp" secondAttribute="top" id="omW-dW-Nza"/>
+                        <constraint firstAttribute="bottom" secondItem="H3J-Gh-tQn" secondAttribute="bottom" constant="4" id="qYG-Tv-IBd"/>
                         <constraint firstItem="dLi-qC-pMH" firstAttribute="leading" secondItem="TGt-et-MTY" secondAttribute="trailing" id="wEp-7z-cNF"/>
                     </constraints>
                 </view>
