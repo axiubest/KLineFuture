@@ -1,0 +1,7 @@
+target 'MDObj' do
+platform :ios, ‘8.0’
+use_frameworks!
+xcodeproj ‘MDObj/MDObj.xcodeproj’
+pod 'Charts'
+
+end

@@ -1,5 +1,0 @@
-target 'MDObj' do
-
-pod 'SocketRocket'
-
-end

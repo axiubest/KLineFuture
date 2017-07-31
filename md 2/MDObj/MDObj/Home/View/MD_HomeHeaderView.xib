@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MD_HomeHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="169"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_top_bgimg" translatesAutoresizingMaskIntoConstraints="NO" id="WLp-0t-qeZ">
+                    <rect key="frame" x="0.0" y="0.0" width="422" height="169"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsE-GN-lKS">
+                    <rect key="frame" x="30" y="64" width="362" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_search2" translatesAutoresizingMaskIntoConstraints="NO" id="Dpo-0U-JTb">
+                            <rect key="frame" x="96" y="11" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="18" id="IaF-5j-GJ1"/>
+                                <constraint firstAttribute="height" constant="18" id="Zfy-Ni-yK8"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Dpo-0U-JTb" firstAttribute="centerY" secondItem="AsE-GN-lKS" secondAttribute="centerY" id="Wm9-Vk-TU6"/>
+                        <constraint firstAttribute="height" constant="40" id="gMg-ek-Zvn"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入股票代码/首字母" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHn-vA-XWX">
+                    <rect key="frame" x="154" y="78" width="114.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DHn-vA-XWX" firstAttribute="leading" secondItem="Dpo-0U-JTb" secondAttribute="trailing" constant="10" id="4ih-4J-lKD"/>
+                <constraint firstItem="AsE-GN-lKS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="B9s-yG-Vy4"/>
+                <constraint firstAttribute="trailing" secondItem="AsE-GN-lKS" secondAttribute="trailing" constant="30" id="DWX-Bg-tx5"/>
+                <constraint firstItem="WLp-0t-qeZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FtX-Pd-Pot"/>
+                <constraint firstAttribute="bottom" secondItem="WLp-0t-qeZ" secondAttribute="bottom" id="Qhr-Kc-N19"/>
+                <constraint firstItem="DHn-vA-XWX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aDm-eP-G2O"/>
+                <constraint firstItem="AsE-GN-lKS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="dyO-mj-ccF"/>
+                <constraint firstItem="WLp-0t-qeZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hVT-ea-n7O"/>
+                <constraint firstItem="AsE-GN-lKS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l3I-bu-9fe"/>
+                <constraint firstItem="DHn-vA-XWX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="siz-sg-zp5"/>
+                <constraint firstAttribute="trailing" secondItem="WLp-0t-qeZ" secondAttribute="trailing" id="v0y-ik-xH7"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgImageView" destination="WLp-0t-qeZ" id="Yo7-ZL-git"/>
+                <outlet property="bgView" destination="AsE-GN-lKS" id="ayJ-UF-CEO"/>
+            </connections>
+            <point key="canvasLocation" x="57" y="-195.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home_icon_search2" width="32" height="32"/>
+        <image name="home_top_bgimg" width="375" height="120"/>
+    </resources>
+</document>
