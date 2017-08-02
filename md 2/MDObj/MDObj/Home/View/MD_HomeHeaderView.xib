@@ -19,10 +19,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="422" height="169"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsE-GN-lKS">
-                    <rect key="frame" x="30" y="64" width="362" height="40"/>
+                    <rect key="frame" x="30" y="79.5" width="362" height="30"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_search2" translatesAutoresizingMaskIntoConstraints="NO" id="Dpo-0U-JTb">
-                            <rect key="frame" x="96" y="11" width="18" height="18"/>
+                            <rect key="frame" x="96" y="6" width="18" height="18"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="18" id="IaF-5j-GJ1"/>
                                 <constraint firstAttribute="height" constant="18" id="Zfy-Ni-yK8"/>
@@ -32,11 +32,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="Dpo-0U-JTb" firstAttribute="centerY" secondItem="AsE-GN-lKS" secondAttribute="centerY" id="Wm9-Vk-TU6"/>
-                        <constraint firstAttribute="height" constant="40" id="gMg-ek-Zvn"/>
+                        <constraint firstAttribute="height" constant="30" id="gMg-ek-Zvn"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入股票代码/首字母" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHn-vA-XWX">
-                    <rect key="frame" x="154" y="78" width="114.5" height="14.5"/>
+                    <rect key="frame" x="154" y="87.5" width="114.5" height="14.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="DHn-vA-XWX" firstAttribute="leading" secondItem="Dpo-0U-JTb" secondAttribute="trailing" constant="10" id="4ih-4J-lKD"/>
-                <constraint firstItem="AsE-GN-lKS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="B9s-yG-Vy4"/>
+                <constraint firstItem="AsE-GN-lKS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="10" id="B9s-yG-Vy4"/>
                 <constraint firstAttribute="trailing" secondItem="AsE-GN-lKS" secondAttribute="trailing" constant="30" id="DWX-Bg-tx5"/>
                 <constraint firstItem="WLp-0t-qeZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FtX-Pd-Pot"/>
                 <constraint firstAttribute="bottom" secondItem="WLp-0t-qeZ" secondAttribute="bottom" id="Qhr-Kc-N19"/>
@@ -53,7 +53,7 @@
                 <constraint firstItem="AsE-GN-lKS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="dyO-mj-ccF"/>
                 <constraint firstItem="WLp-0t-qeZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hVT-ea-n7O"/>
                 <constraint firstItem="AsE-GN-lKS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l3I-bu-9fe"/>
-                <constraint firstItem="DHn-vA-XWX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="siz-sg-zp5"/>
+                <constraint firstItem="DHn-vA-XWX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="10" id="siz-sg-zp5"/>
                 <constraint firstAttribute="trailing" secondItem="WLp-0t-qeZ" secondAttribute="trailing" id="v0y-ik-xH7"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

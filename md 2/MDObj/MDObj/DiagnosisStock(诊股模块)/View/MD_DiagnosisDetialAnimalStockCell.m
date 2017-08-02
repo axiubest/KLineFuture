@@ -70,7 +70,9 @@
     
     _chartView.chartDescription.enabled = NO;
     _chartView.extraTopOffset = 50 *SCREEN_SCALE;
-
+    _chartView.scaleYEnabled = NO;//取消Y轴缩放
+    _chartView.doubleTapToZoomEnabled = NO;//取消双击缩放
+    _chartView.dragEnabled = NO;//启用拖拽图表
     _chartView.maxVisibleCount = 60;
     _chartView.pinchZoomEnabled = NO;
     _chartView.drawGridBackgroundEnabled = NO;

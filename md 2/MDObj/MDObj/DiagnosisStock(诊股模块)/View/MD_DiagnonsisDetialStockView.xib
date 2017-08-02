@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12121"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,18 +15,18 @@
             <rect key="frame" x="0.0" y="0.0" width="431" height="270"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6J-Iw-3O8" customClass="YKLineChartView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6J-Iw-3O8" customClass="CandleStickChartView" customModule="Charts">
                     <rect key="frame" x="0.0" y="0.0" width="431" height="270"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRa-DZ-jKb">
                             <rect key="frame" x="301" y="0.0" width="130" height="270"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.085075431034482757" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.085075431034482757" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="130" id="zGe-86-RrK"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="kRa-DZ-jKb" secondAttribute="trailing" id="TSj-mk-jpZ"/>
                         <constraint firstItem="kRa-DZ-jKb" firstAttribute="top" secondItem="K6J-Iw-3O8" secondAttribute="top" id="pdS-Dw-J1c"/>
@@ -43,8 +44,8 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="chartView" destination="K6J-Iw-3O8" id="k1m-9U-NK6"/>
                 <outlet property="layerIView" destination="kRa-DZ-jKb" id="SZs-b1-QFR"/>
-                <outlet property="stockKLineView" destination="K6J-Iw-3O8" id="bA0-xW-N98"/>
             </connections>
             <point key="canvasLocation" x="303.5" y="-262"/>
         </view>

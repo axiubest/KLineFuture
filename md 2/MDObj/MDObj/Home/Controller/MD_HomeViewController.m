@@ -29,7 +29,7 @@ static NSString   *diagnosisStockImageString = @"home_btn_diagnose";
 static NSInteger   liveRadioHeaderViewHeight = 50;
 static CGFloat     TableViewCellMargin = 10;
 
-#define HEADER_VIEW_HEIGHT   KHEIGHT * 0.1// 顶部商品图片高度
+#define HEADER_VIEW_HEIGHT   64// 顶部商品图片高度
 
 
 @interface MD_HomeViewController ()<UIScrollViewDelegate,UITableViewDelegate, UITableViewDataSource,clickThreeToolBarDelegate,SRWebSocketDelegate>
@@ -114,7 +114,8 @@ static CGFloat     TableViewCellMargin = 10;
     
     MD_HomeHeaderView *v = [[NSBundle mainBundle]loadNibNamed:[MD_HomeHeaderView XIU_ClassIdentifier] owner:self options:nil].lastObject;
 
-    v.frame = CGRectMake(0, 0, KWIDTH, 64);
+    v.frame = CGRectMake(0, 0, KWIDTH, 120);
+    
     [v bk_whenTapped:^{
         [self.navigationController pushViewController:[[MD_SearchStockVC alloc] init] animated:YES];
     }];

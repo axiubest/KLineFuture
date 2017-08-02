@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YKLineChartView.h"
-@interface MD_DiagnonsisDetialStockView : UIView<YKLineChartViewDelegate>
+
+@interface MD_DiagnonsisDetialStockView : UIView
 
 
-@property (weak, nonatomic) IBOutlet YKLineChartView *stockKLineView;
+
 @property (weak, nonatomic) IBOutlet UIView *layerIView;
 
 

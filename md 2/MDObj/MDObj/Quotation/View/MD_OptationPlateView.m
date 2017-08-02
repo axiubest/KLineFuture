@@ -163,6 +163,7 @@ static NSString *xorder = @"DESC";
     MD_QuotationPlateDetialVC *vc = [[MD_QuotationPlateDetialVC alloc] init];
 
             vc.Code = tag;
+            vc.title = @"板块详情";
             [_baseVC.navigationController pushViewController:vc animated:YES];
 
     
